@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Updates - RamAdhar Bhandary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            background: #f4f6fa;
+            color: #1e2a3a;
+        }
+        header {
+            background: linear-gradient(135deg, #0b2a4a, #1a4a7a);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.8rem;
+        }
+        nav a {
+            color: #ffb347;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .page-title h2 {
+            font-size: 2.4rem;
+            color: #0b2a4a;
+        }
+        .page-title p {
+            color: #3d4f63;
+            font-size: 1.1rem;
+        }
+        .update-card {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            margin-bottom: 28px;
+            border-left: 6px solid #1a4a7a;
+            transition: 0.3s;
+        }
+        .update-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+        }
+        .update-card .date {
+            color: #1a4a7a;
+            font-weight: 700;
+            font-size: 1rem;
+            background: #eaf2fb;
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+        }
+        .update-card h3 {
+            font-size: 1.5rem;
+            color: #0b2a4a;
+            margin-bottom: 8px;
+        }
+        .update-card p {
+            color: #2a3a4a;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        .update-card .category {
+            display: inline-block;
+            background: #ffb347;
+            color: #1e2a3a;
+            padding: 2px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .update-card img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 14px;
+            border: 1px solid #ddd;
+        }
+        .update-card .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-top: 14px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .update-card .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+        .btn-add {
+            display: inline-block;
+            background: #1a4a7a;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 10px 0 30px;
+            transition: 0.3s;
+        }
+        .btn-add:hover {
+            background: #0b2a4a;
+            transform: scale(1.03);
+        }
+        .btn-back {
+            display: inline-block;
+            background: #ffb347;
+            color: #1e2a3a;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn-back:hover {
+            background: #ff9f1c;
+        }
+        footer {
+            background: #0b1a2a;
+            color: #aabccc;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+        }
+        .new-update-badge {
+            background: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 30px;
+            margin-left: 10px;
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .update-card { padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RamAdhar Bhandary</h1>
+    <p>🇳🇵 जनताको सेवक • सत्यको पथ • विकासको यात्रा</p>
+    <nav>
+        <a href="index.html">गृहपृष्ठ</a>
+        <a href="about.html">हाम्रो बारे</a>
+        <a href="updates.html">अपडेट</a>
+        <a href="contact.html">सम्पर्क</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="page-title">
+        <h2>📰 ताजा अपडेटहरू</h2>
+        <p>यहाँ हाम्रा दैनिक गतिविधि, भाषण, यात्रा, घोषणा र सेवाका क्षणहरू पढ्नुहोस्।</p>
+        <a href="#how-to-add" class="btn-add">➕ नयाँ अपडेट कसरी थप्ने ?</a>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 🔽 🔽 🔽 यहाँ नयाँ अपडेट थप्नुहोस् 🔽 🔽 🔽 -->
+    <!-- ============================================ -->
+
+    <!-- UPDATE 1 -->
+    <div class="update-card">
+        <span class="date">📅 २२ जून २०२६</span>
+        <span class="category">🗣️ भाषण</span>
+        <h3>महोत्तरी गाउँपालिकामा विकास सम्बन्धी अन्तरक्रिया</h3>
+        <p>
+            आज महोत्तरी गाउँपालिका वडा नं. २ मा आयोजित <strong>विकास निर्माण सम्बन्धी अन्तरक्रिया कार्यक्रम</strong> मा सहभागी भई 
+            शिक्षा, स्वास्थ्य र सडक निर्माणका योजनाहरूबारे जनतासँग प्रत्यक्ष छलफल गरियो। 
+            स्थानीय जनताका समस्या सुनेर समाधानका लागि प्रशासनलाई दबाब दिइने प्रतिबद्धता व्यक्त गरियो।
+        </p>
+        <!-- फोटो (चाहेमा) -->
+        <!-- <img src="meeting.jpg" alt="meeting" /> -->
+    </div>
+
+    <!-- UPDATE 2 -->
+    <div class="update-card">
+        <span class="date">📅 २१ जून २०२६</span>
+        <span class="category">📢 घोषणा</span>
+        <h3>गरिब विद्यार्थीका लागि छात्रवृत्ति वितरण</h3>
+        <p>
+            आगामी शैक्षिक सत्रका लागि <strong>गाउँका ५० जना गरिब तथा जेहेन्दार विद्यार्थीहरूलाई छात्रवृत्ति</strong> 
+            प्रदान गरिने घोषणा गरियो। फाराम भर्ने अन्तिम मिति ३० जून राखिएको छ। 
+            इच्छुक विद्यार्थी वा अभिभावकले सम्पर्क कार्यालयमा आएर आवेदन दिन सक्नुहुनेछ।
+        </p>
+    </div>
+
+    <!-- UPDATE 3 (Video Example) -->
+    <div class="update-card">
+        <span class="date">📅 २० जून २०२६</span>
+        <span class="category">🎥 भिडियो</span>
+        <h3>जनताको आवाज — एक सशक्त अभियान</h3>
+        <p>
+            यहाँ हेर्नुहोस् हाम्रो टोलीले गाउँ–गाउँमा पुगेर <strong>पीडितहरूको समस्या सुन्ने</strong> अभियानको भिडियो।
+            हरेक मानिसको आवाज महत्त्वपूर्ण छ — यही हाम्रो संकल्प हो।
+        </p>
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                title="YouTube video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- NOTE: YouTube को VIDEO_ID_HERE लाई वास्तविक ID ले बदल्नुहोस् -->
+    </div>
+
+    <!-- UPDATE 4 -->
+    <div class="update-card">
+        <span class="date">📅 १९ जून २०२६</span>
+        <span class="category">📸 फोटो</span>
+        <h3>अदालतमा पीडितको पक्षमा उपस्थिति</h3>
+        <p>
+            एक दलित समुदायका व्यक्तिलाई <strong>जग्गा विवादमा न्याय</strong> दिलाउन महोत्तरी जिल्ला अदालतमा उपस्थित भई 
+            कानुनी सहायता प्रदान गरियो। पीडितले लामो समयदेखि न्यायको खोजी गरिरहेका थिए। 
+            अब उक्त मुद्दाले गति लिएको छ।
+        </p>
+        <!-- फोटो (चाहेमा) -->
+        <!-- <img src="court.jpg" alt="court visit" /> -->
+    </div>
+
+    <!-- UPDATE 5 -->
+    <div class="update-card">
+        <span class="date">📅 १८ जून २०२६</span>
+        <span class="category">🤝 सेवा</span>
+        <h3>वृद्धाश्रममा आर्थिक सहयोग</h3>
+        <p>
+            महोत्तरीको स्थानीय वृद्धाश्रममा रहेका <strong>१५ जना वृद्ध–वृद्धाहरूलाई खाद्यान्न र औषधि</strong> 
+            सहयोग प्रदान गरियो। यस प्रकारका सेवामूलक कार्यहरू निरन्तर जारी रहनेछन्।
+        </p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 🔼 🔼 🔼 नयाँ अपडेट यहाँ माथि थप्नुहोस् 🔼 🔼 🔼 -->
+    <!-- ============================================ -->
+
+    <!-- How to add new update -->
+    <div id="how-to-add" style="background:#eaf2fb; padding:30px; border-radius:18px; margin:40px 0;">
+        <h3 style="color:#0b2a4a; font-size:1.6rem;">➕ नयाँ अपडेट कसरी थप्ने ?</h3>
+        <p style="font-size:1.05rem; line-height:2; color:#1e2a3a;">
+            <strong>Step 1:</strong> GitHub मा <strong>updates.html</strong> फाइल खोल्नुहोस् (Edit पेन्सिल icon) ।<br/>
+            <strong>Step 2:</strong> माथि <strong>UPDATE 1, UPDATE 2</strong> भएको ठाउँमा <strong>नयाँ UPDATE</strong> कॉपी गर्नुहोस्।<br/>
+            <strong>Step 3:</strong> मिति, शीर्षक, विवरण, क्याटगोरी (🗣️ भाषण / 📢 घोषणा / 🎥 भिडियो / 📸 फोटो / 🤝 सेवा) बदल्नुहोस्।<br/>
+            <strong>Step 4:</strong> <strong>"Commit changes"</strong> थिच्नुहोस् → Vercel ले 1-2 मिनेटमा <strong>auto-update</strong> गर्छ।
+        </p>
+        <div style="background:#ffb347; color:#1e2a3a; padding:12px 18px; border-radius:12px; margin-top:14px; font-weight:bold;">
+            ⚡ अब हरेक दिन ५ मिनेटमा नयाँ अपडेट लाइभ !
+        </div>
+    </div>
+
+    <div style="text-align:center;">
+        <a href="index.html" class="btn-back">🏠 गृहपृष्ठमा फर्कनुहोस्</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 RamAdhar Bhandary | Official Website</p>
+    <p style="margin-top:6px; font-size:0.9rem;">🇳🇵 जनता पहिले, जनता सधैं</p>
+</footer>
+
+</body>
+</html>
