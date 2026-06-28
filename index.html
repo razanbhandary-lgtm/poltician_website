@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadhar Bhandary | अध्यक्ष, नेपाल फूल माली समाज</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Sans+Devanagari:wght@400;500;600&amp;display=swap');
+        
+        :root {
+            --primary-green: #166534;
+            --accent-orange: #ea580c;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .devanagari {
+            font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)), url('hero.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #166534, #ea580c);
+            border-radius: 3px;
+        }
+
+        .nav-active {
+            color: #166534;
+            font-weight: 600;
+        }
+
+        .work-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .work-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .gallery-img {
+            transition: transform 0.4s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Name -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-11 h-11 bg-green-800 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-leaf text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-2xl tracking-tight">Ramadhar Bhandary</h1>
+                        <p class="text-xs text-gray-500 -mt-1">जनताको सेवामा</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-green-700 transition-colors">About</a>
+                    <a href="#work" class="hover:text-green-700 transition-colors">My Work</a>
+                    <a href="#gallery" class="hover:text-green-700 transition-colors">Gallery</a>
+                    <a href="#contact" class="hover:text-green-700 transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" 
+                       class="px-6 py-2.5 bg-green-800 hover:bg-green-900 text-white text-sm font-semibold rounded-full transition-all flex items-center gap-x-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn"
+                            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-green-700">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4">
+            <div class="flex flex-col gap-y-3 text-sm font-medium">
+                <a href="#about" class="py-1.5 hover:text-green-700">About</a>
+                <a href="#work" class="py-1.5 hover:text-green-700">My Work</a>
+                <a href="#gallery" class="py-1.5 hover:text-green-700">Gallery</a>
+                <a href="#contact" class="py-1.5 hover:text-green-700">Contact</a>
+                <a href="#contact" 
+                   class="mt-2 px-5 py-2.5 bg-green-800 text-white text-center rounded-full text-sm font-semibold">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-[100dvh] flex items-center justify-center relative">
+        <div class="max-w-5xl mx-auto px-6 text-center text-white">
+            <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-white/30">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium tracking-wider">CURRENTLY SERVING AS</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-3">Ramadhar Bhandary</h1>
+            
+            <p class="text-2xl md:text-3xl font-light mb-2 tracking-tight">रामाधार भण्डारी</p>
+            
+            <div class="max-w-md mx-auto">
+                <p class="text-xl md:text-2xl font-medium mb-8 text-white/90">
+                    अध्यक्ष, नेपाल फूल माली समाज<br>
+                    <span class="text-lg">Social Worker • Ward No. 2, Mahottari</span>
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" 
+                   class="px-10 py-4 bg-white text-green-900 font-semibold rounded-2xl flex items-center justify-center gap-x-3 hover:bg-amber-50 transition-all text-lg shadow-xl">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>सम्पर्क गर्नुहोस्</span>
+                </a>
+                <a href="#work" 
+                   class="px-10 py-4 bg-white/20 backdrop-blur-md border border-white/40 hover:bg-white/30 font-semibold rounded-2xl flex items-center justify-center gap-x-3 transition-all text-lg">
+                    <span>मेरो काम</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+            <div class="flex flex-col items-center text-white/70 text-xs tracking-[2px]">
+                <span>SCROLL TO EXPLORE</span>
+                <i class="fa-solid fa-chevron-down mt-1 animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <div class="max-w-5xl mx-auto px-6 -mt-8 relative z-10">
+        <div class="bg-white shadow-xl rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 border">
+            <div class="text-center">
+                <div class="text-4xl font-bold text-green-800">15+</div>
+                <div class="text-sm text-gray-500 mt-1">Years of Service</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-green-800">1000+</div>
+                <div class="text-sm text-gray-500 mt-1">People Helped</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-green-800">50+</div>
+                <div class="text-sm text-gray-500 mt-1">Community Programs</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-green-800">Ward 2</div>
+                <div class="text-sm text-gray-500 mt-1">Mahottari, Nepal</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-5xl mx-auto px-6 pt-20 pb-16">
+        <div class="grid md:grid-cols-12 gap-x-12 items-center">
+            <div class="md:col-span-7">
+                <div class="mb-6">
+                    <span class="px-4 py-1.5 bg-green-100 text-green-700 text-xs font-semibold tracking-widest rounded-full">ABOUT ME</span>
+                </div>
+                <h2 class="text-5xl font-bold tracking-tight mb-6">Dedicated to<br>serving the people</h2>
+                
+                <div class="prose prose-lg text-gray-600 max-w-none">
+                    <p class="text-xl">Namaste! I am <strong>Ramadhar Bhandary</strong>, a committed social worker and currently serving as the <strong>Adhyaksh (President)</strong> of <strong>Nepal Phool Mali Samaj</strong>.</p>
+                    
+                    <p>I have been working tirelessly for the betterment of people in <strong>Ward No. 2, Mahottari</strong>. From supporting flower growers and farmers to organizing community programs and helping the needy, my journey has always been about <strong>जनसेवा (public service)</strong>.</p>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5 mt-10 md:mt-0">
+                <div class="bg-white p-8 rounded-3xl shadow-xl border">
+                    <h4 class="font-semibold text-lg mb-4 flex items-center gap-x-2">
+                        <i class="fa-solid fa-user-tie text-green-700"></i> 
+                        <span>Current Roles</span>
+                    </h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-x-3">
+                            <i class="fa-solid fa-check-circle text-green-600 mt-1"></i>
+                            <span><strong>Adhyaksh</strong> — Nepal Phool Mali Samaj</span>
+                        </li>
+                        <li class="flex gap-x-3">
+                            <i class="fa-solid fa-check-circle text-green-600 mt-1"></i>
+                            <span><strong>Social Worker</strong> — Ward No. 2, Mahottari</span>
+                        </li>
+                        <li class="flex gap-x-3">
+                            <i class="fa-solid fa-check-circle text-green-600 mt-1"></i>
+                            <span>Active member of local development initiatives</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Work Section -->
+    <section id="work" class="bg-white py-16 border-y">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="px-4 py-1.5 bg-orange-100 text-orange-700 text-xs font-semibold tracking-widest rounded-full">MY COMMITMENT</span>
+                <h2 class="text-5xl font-bold tracking-tight mt-3">Work for the People</h2>
+                <p class="text-gray-600 mt-3 max-w-md mx-auto">Real work. Real impact. Serving the community of Mahottari with dedication.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Work Card 1 -->
+                <div class="work-card bg-white border rounded-3xl p-8 hover:border-green-200">
+                    <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-seedling text-green-700 text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-3">Supporting Flower Growers</h3>
+                    <p class="text-gray-600">As President of Nepal Phool Mali Samaj, I actively support local flower farmers with resources, training, and market access.</p>
+                </div>
+
+                <!-- Work Card 2 -->
+                <div class="work-card bg-white border rounded-3xl p-8 hover:border-green-200">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-users text-orange-600 text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-3">Community Development</h3>
+                    <p class="text-gray-600">Organized multiple adhiveshan, health camps, and awareness programs for the welfare of people in Ward No. 2 and surrounding areas.</p>
+                </div>
+
+                <!-- Work Card 3 -->
+                <div class="work-card bg-white border rounded-3xl p-8 hover:border-green-200">
+                    <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-hand-holding-heart text-green-700 text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-3">Helping the Needy</h3>
+                    <p class="text-gray-600">Regular support to poor families, elderly citizens, and students through education aid, food distribution, and emergency help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="max-w-5xl mx-auto px-6 py-20">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <span class="px-4 py-1.5 bg-green-100 text-green-700 text-xs font-semibold tracking-widest rounded-full">MOMENTS</span>
+                <h2 class="text-5xl font-bold tracking-tight mt-2">Photo Gallery</h2>
+            </div>
+            <a href="#" class="hidden md:flex items-center text-sm font-medium text-green-700 hover:text-green-800">
+                View All Photos <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Photo 1 -->
+            <div class="relative group overflow-hidden rounded-3xl shadow-xl aspect-[16/10]">
+                <img src="photo1.jpg" alt="Ramadhar Bhandary - Clean Portrait" 
+                     class="w-full h-full object-cover gallery-img">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <p class="text-white font-medium">Ramadhar Bhandary • Nepal Phool Mali Samaj</p>
+                </div>
+            </div>
+            
+            <!-- Photo 2 -->
+            <div class="relative group overflow-hidden rounded-3xl shadow-xl aspect-[16/10]">
+                <img src="photo2.jpg" alt="Ramadhar Bhandary at community event" 
+                     class="w-full h-full object-cover gallery-img">
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                    <p class="text-white font-medium">During the Adhiveshan program in Mahottari</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-center text-sm text-gray-500 mt-6">More photos will be added soon. Stay connected!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-green-900 text-white py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-green-300 text-sm tracking-[3px] font-medium">LET'S CONNECT</span>
+                <h2 class="text-5xl font-bold tracking-tight mt-2">Get in Touch</h2>
+                <p class="text-green-200 mt-3">I am always ready to listen and work for you.</p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-8">
+                <!-- Contact Info -->
+                <div class="md:col-span-3 bg-white/10 backdrop-blur-lg p-9 rounded-3xl border border-white/20">
+                    <h4 class="font-semibold text-xl mb-6">Contact Information</h4>
+                    
+                    <div class="space-y-6 text-lg">
+                        <div class="flex items-start gap-x-4">
+                            <i class="fa-solid fa-phone text-2xl text-green-300 mt-1 w-8"></i>
+                            <div>
+                                <div class="text-sm text-green-300">Phone / WhatsApp</div>
+                                <a href="tel:9813750224" class="font-semibold hover:underline">9813750224</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-x-4">
+                            <i class="fa-solid fa-map-marker-alt text-2xl text-green-300 mt-1 w-8"></i>
+                            <div>
+                                <div class="text-sm text-green-300">Address</div>
+                                <div class="font-semibold">Ward No. 2, Mahottari<br>Nepal</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-x-4">
+                            <i class="fa-solid fa-user-tie text-2xl text-green-300 mt-1 w-8"></i>
+                            <div>
+                                <div class="text-sm text-green-300">Position</div>
+                                <div class="font-semibold">Adhyaksh, Nepal Phool Mali Samaj</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Message Form -->
+                <div class="md:col-span-2 bg-white rounded-3xl p-8 text-gray-800">
+                    <h4 class="font-bold text-xl mb-5">Send a Message</h4>
+                    
+                    <form id="contact-form" onsubmit="submitForm(event)">
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" id="name" placeholder="Your Name" required
+                                       class="w-full px-5 py-3 border rounded-2xl text-sm focus:outline-none focus:border-green-700">
+                            </div>
+                            <div>
+                                <input type="tel" id="phone" placeholder="Your Phone Number" required
+                                       class="w-full px-5 py-3 border rounded-2xl text-sm focus:outline-none focus:border-green-700">
+                            </div>
+                            <div>
+                                <textarea id="message" rows="3" placeholder="Your Message..." required
+                                          class="w-full px-5 py-3 border rounded-2xl text-sm focus:outline-none focus:border-green-700 resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit"
+                                    class="w-full py-3.5 bg-green-800 hover:bg-green-900 transition-colors text-white font-semibold rounded-2xl flex items-center justify-center gap-x-2">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-[10px] text-center text-gray-400 mt-3">This form sends message to WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-5xl mx-auto px-6 text-center text-sm">
+            <p>© 2026 Ramadhar Bhandary. All rights reserved.</p>
+            <p class="mt-1 text-xs">Made with ❤️ for the people of Mahottari</p>
+            
+            <div class="mt-6 pt-6 border-t border-white/10 text-xs">
+                <span class="font-medium text-white">Developed by</span> 
+                <span class="font-semibold text-amber-400">RAZAN BHANDARY</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent-color', '#166534');
+        }
+        
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                
+                const icon = mobileBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const navHeight = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - navHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Contact form handler (opens WhatsApp)
+        function submitForm(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            const fullMessage = `Hello Ramadhar Bhandary ji,%0A%0AName: ${name}%0APhone: ${phone}%0A%0AMessage: ${message}%0A%0ASent from your website`;
+            
+            // Open WhatsApp
+            const whatsappUrl = `https://wa.me/9779813750224?text=${fullMessage}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset form
+            e.target.reset();
+            
+            // Optional success message
+            setTimeout(() => {
+                alert("Thank you! You will be redirected to WhatsApp to send the message.");
+            }, 800);
+        }
+
+        // Initialize everything
+        function init() {
+            initializeTailwind();
+            
+            // Optional: Add subtle animation to stats
+            const stats = document.querySelectorAll('.stat-number');
+            // You can add count-up animation here if needed later
+        }
+        
+        window.onload = init;
+    </script>
+</body>
+</html>
